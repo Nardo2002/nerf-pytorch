@@ -873,6 +873,11 @@ def train():
 
 
 if __name__=='__main__':
-    torch.set_default_tensor_type('torch.cuda.FloatTensor')
+    # torch.set_default_tensor_type('torch.cuda.FloatTensor')
+    # Set the default device to CUDA (GPU)
+    torch.set_default_device('cuda')
+
+    # Set the default data type to float (equivalent to 'torch.cuda.FloatTensor')
+    torch.set_default_dtype(torch.float32)
 
     train()
